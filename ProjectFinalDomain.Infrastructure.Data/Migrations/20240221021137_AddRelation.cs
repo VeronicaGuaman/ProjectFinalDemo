@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProjectFinalDomain.Infrastructure.Data.Migrations
+namespace ProjectFinalDemo.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class AddRelation : Migration

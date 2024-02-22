@@ -1,8 +1,8 @@
 ﻿using ProjectFinalDemo.Domain.Entities;
 using ProjectFinalDemo.Domain.Repositories;
-using ProjectFinalDomain.Infrastructure.Data.Data;
+using ProjectFinalDemo.Infrastructure.Data.Data;
 
-namespace ProjectFinalDomain.Infrastructure.Data.Repositories
+namespace ProjectFinalDemo.Infrastructure.Data.Repositories
 {
     public class ProductRepository : GenericRepository<ProductEntity>, IProductRepository
     {

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectFinalDomain.Infrastructure.Data.Data;
+using ProjectFinalDemo.Infrastructure.Data.Data;
 
 #nullable disable
 
-namespace ProjectFinalDomain.Infrastructure.Data.Migrations
+namespace ProjectFinalDemo.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20240221020428_InitialMigration")]

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectFinalDemo.Domain.Entities;
 
-namespace ProjectFinalDomain.Infrastructure.Data.Data
+namespace ProjectFinalDemo.Infrastructure.Data.Data
 {
     public class DataContext : DbContext
     {

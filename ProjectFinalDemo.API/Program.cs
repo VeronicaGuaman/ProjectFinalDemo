@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectFinalDemo.Application.Services.Interfaces;
 using ProjectFinalDemo.Domain.Repositories;
-using ProjectFinalDomain.Infrastructure.Data.Data;
-using ProjectFinalDomain.Infrastructure.Data.Repositories;
+using ProjectFinalDemo.Infrastructure.Data.Data;
+using ProjectFinalDemo.Infrastructure.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
