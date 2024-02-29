@@ -19,7 +19,7 @@ namespace ProjectFinalDemo.Infrastructure.Data.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var entity = GetByIdAsync(id);
+            var entity = GetByIdSync(id);
             _context.Set<T>().Remove(entity);
         }
 
@@ -28,9 +28,14 @@ namespace ProjectFinalDemo.Infrastructure.Data.Repositories
             return _context.Set<T>().ToList();
         }
 
-        public T GetByIdAsync(int id)
+        public T GetByIdSync(int id)
         {
             return _context.Set<T>().Find(id);
+        }
+
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await _context.Set<T>().FindAsync(id);
         }
 
         public async Task UpdateAsync(T entity)
@@ -41,6 +46,11 @@ namespace ProjectFinalDemo.Infrastructure.Data.Repositories
         public void Add(T entity)
         {
             _context.Set<T>().Add(entity);
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

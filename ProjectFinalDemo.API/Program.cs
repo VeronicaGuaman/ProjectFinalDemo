@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ProjectFinalDemo.Application.Services;
 using ProjectFinalDemo.Application.Services.Interfaces;
 using ProjectFinalDemo.Domain.Repositories;
 using ProjectFinalDemo.Infrastructure.Data.Data;
@@ -16,8 +17,13 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(build
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
 builder.Services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
-builder.Services.AddScoped(typeof(IProductService), typeof(IProductService));
+builder.Services.AddScoped(typeof(IProductService), typeof(ProductServices));
 builder.Services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
+
+//Add AutoMapper
+//obtiene todos los ensamblados cargados en el dominio de la aplicación actual. 
+//Esto significa que AutoMapper buscará en todos estos ensamblados cualquier perfil de mapeo que hayas definido
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
