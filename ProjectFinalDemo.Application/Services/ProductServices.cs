@@ -39,8 +39,8 @@ namespace ProjectFinalDemo.Application.Services
         public async Task Add(ProductRequestModel entity)
         {
             var productEntity = _mapper.Map<ProductEntity>(entity);
-            productEntity.CreatedBy = "Admin";
-            productEntity.UpdatedBy = "Admin";
+            productEntity.CreatedBy = 1;
+            productEntity.UpdatedBy = 1;
             await _productRepository.AddAsync(productEntity);
             await _productRepository.SaveChangesAsync();
         }

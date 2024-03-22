@@ -19,4 +19,8 @@
     <ProjectReference Include="..\ProjectFinalDemo.Domain\ProjectFinalDemo.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+
 </Project>
