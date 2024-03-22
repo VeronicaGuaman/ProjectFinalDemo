@@ -11,6 +11,8 @@ namespace ProjectFinalDemo.Infrastructure.Data.Data
 
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<RoleEntity> Roles { get; set; }
 
         public override int SaveChanges()
         {
